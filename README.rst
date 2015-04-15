@@ -1,59 +1,35 @@
-****************************
-mopidy-lcd
-****************************
+Mopidy-lcd is an MPC for Pi Music Box using  Adafruit's Character LCD with buttons
 
-.. image:: https://img.shields.io/pypi/v/mopidy-lcd.svg?style=flat
-    :target: https://pypi.python.org/pypi/mopidy-lcd/
-    :alt: Latest PyPI version
+Features:
+===========
+MPC Features:
+- Initializes to a clock display
+- Scrolls Song Title and Artist
+- Shows Play status as time into song
+- Can select playlists (currently not working right)
+- Allows you to turn shuffle and repeat on and off
 
-.. image:: https://img.shields.io/pypi/dm/mopidy-lcd.svg?style=flat
-    :target: https://pypi.python.org/pypi/mopidy-lcd/
-    :alt: Number of PyPI downloads
+RPI Commands:
+- Can change the audio output
+- Can shutdown or reboot
+- can change the display colour
 
-.. image:: https://img.shields.io/travis/TerraBAS/mopidy-lcd/master.png?style=flat
-    :target: https://travis-ci.org/TerraBAS/mopidy-lcd
-    :alt: Travis CI build status
+Necessary Items:
+===========
+- Raspberry Pi with Pi Music Box
+- Adafruit Character LCD with buttons
 
-.. image:: https://img.shields.io/coveralls/TerraBAS/mopidy-lcd/master.svg?style=flat
-   :target: https://coveralls.io/r/TerraBAS/mopidy-lcd?branch=master
-   :alt: Test coverage
+Installation:
+===========
+First thing first is to make sure you have Pi Music Box setup
+Their documentation is very easy to follow
 
-Mopidy extension for viewing Mopidy infos on a 16x2 LCD screen.
+Next follow the installation outlined in Adafruit's usage page:
+https://learn.adafruit.com/adafruit-16x2-character-lcd-plus-keypad-for-raspberry-pi/usage
 
+Running:
+===========
+To run, run the main.py with python.
+<code>sudo python main.py</code>
 
-Installation
-============
-
-Install by running::
-
-    pip install mopidy-lcd
-
-Or, if available, install the Debian/Ubuntu package from `apt.mopidy.com
-<http://apt.mopidy.com/>`_.
-
-
-Configuration
-=============
-
-Before starting Mopidy, you must add configuration for
-mopidy-lcd to your Mopidy configuration file::
-
-    [LCD]
-    # TODO: Add example of extension config
-
-
-Project resources
-=================
-
-- `Source code <https://github.com/TerraBAS/mopidy-lcd>`_
-- `Issue tracker <https://github.com/TerraBAS/mopidy-lcd/issues>`_
-- `Development branch tarball <https://github.com/TerraBAS/mopidy-lcd/archive/master.tar.gz#egg=mopidy-lcd-dev>`_
-
-
-Changelog
-=========
-
-v0.1.0 (UNRELEASED)
-----------------------------------------
-
-- Initial release.
+if you want it to automatically run on startup, setup a cron for main.py
