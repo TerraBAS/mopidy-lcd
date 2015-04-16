@@ -23,7 +23,7 @@ def main():
 			for b in buttons:
 				if lcd.is_pressed(b[0]):
 					back.button(b[1])
-					sleep(.2)
+			sleep(.1)
 			if updateTime < datetime.now():
 				updateTime = datetime.now()+timedelta(milliseconds=500)
 				back.refresh_mpd()
